@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Positive Affirmations </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 40px;
+            background-color: #f0f8ff;
+        }
+        h1 {
+            color: #333;
+        }
+        #wordDisplay {
+            font-size: 2em;
+            margin: 20px;
+            color: #007acc;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: #007acc;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #005f99;
+        }
+    </style>
+</head>
+<body>
+    <h1>🎉 Positive Affirmation 🎉</h1>
+    <p>Click the button to get an affirmation!</p>
+    <div id="wordDisplay">Your word will appear here</div>
+    <button onclick="showRandomWord()">Read an affirmation</button>
+
+    <script>
+        const words = [
+            "I am seeing myself positive, joyful, and peaceful now.", "I can have, be or do anything", "Every fiber of my being radiates positive energy", "I appreciate and love my body", "The possibilities in my life are infinite", "I am surrounded by love and life is good", "I choose happiness and joy in each and every moment", "I deserve every blessing that flows into my life with joy", "I embrace positivity in both challenges and victories.", "I am enough. I have enough.",
+            "I prioritize my well-being", "I am kind to myself and others", "I have everything I need to achieve my goals", "I trust myself to make the right decisions.", "I will accomplish everything I need to do today", "I am resilient in the face of challenges.", "I am grateful for another day of life"
+        ];
+
+        function showRandomWord() {
+            const randomIndex = Math.floor(Math.random() * words.length);
+            document.getElementById("wordDisplay").textContent = words[randomIndex];
+        }
+    </script>
+</body>
+</html>
